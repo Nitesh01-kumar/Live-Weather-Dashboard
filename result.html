@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Result</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .section-title {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 10px;
+        }
+        .day-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            min-width: 130px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .back-btn{
+            padding: 10px 15px;
+            font-size: 15px;
+            border: none;
+            background: #87CEEB;
+            color: white;
+            border-radius:10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="Main-Box">
+        <h1>Weather result</h1>
+
+        <div id="currentWeather"></div>
+
+        <h2 class="section-title">Next 5 Days</h2>
+        <div id="nextContainer" class="cards-container"></div>
+
+        <br></br>
+        <a href="index.html">
+            <button class="back-btn">Back</button>
+            
+        </a>
+        
+    </div>
+
+    <script src="result.js"></script>
+</body>
+</html>
