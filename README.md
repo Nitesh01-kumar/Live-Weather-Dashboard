@@ -51,13 +51,41 @@ Weather-Dashboard/
 ```bash
 git clone https://github.com/your-username/weather-dashboard.git
 2. Open the project folder
-3. Run index.html in your browser
+
+3. Open index.html in your browser
 
 
----
+🔑 API Used
+-----------
 
-If you want next step, I can also:
-- :contentReference[oaicite:0]{index=0}
-- Or :contentReference[oaicite:1]{index=1}
+OpenWeather API  
+https://openweathermap.org/api
 
-Just tell me 👍
+
+🎯 What I Learned
+-----------------
+
+- Working with APIs in JavaScript
+- Fetching live data using fetch()
+- DOM manipulation
+- Handling async requests
+- Creating dynamic UI updates
+- Improving frontend development skills
+
+
+📌 Future Improvements
+----------------------
+
+- Add geolocation-based weather detection
+- Add hourly weather updates
+- Improve mobile responsiveness
+- Add loading animations
+- Add dark mode feature
+
+
+👨‍💻 Author
+------------
+
+Nitesh Kumar  
+Computer Science Student (1st Semester)  
+Passionate about Web Development 🚀
