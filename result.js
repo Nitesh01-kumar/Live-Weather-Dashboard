@@ -5,15 +5,33 @@ const city = new URLSearchParams(window.location.search).get("city");
 const currentWeather = document.getElementById("currentWeather");
 const nextContainer = document.getElementById("nextContainer");
 
-function setBackgroundColor(condition) {
-    let color = "";
-    if (condition.includes("Clear")) color = "linear-gradient(to right, #f6d365, #fda085)";
-    else if (condition.includes("Cloud")) color = "linear-gradient(to right, #d7d2cc, #304352)";
-    else if (condition.includes("Rain")) color = "linear-gradient(to right, #4b79a1, #283e51)";
-    else if (condition.includes("Snow")) color = "linear-gradient(to right, #e6dada, #274046)";
-    else if (condition.includes("Thunder")) color = "linear-gradient(to right, #3a6186, #89253e)";
-    else color = "linear-gradient(to right, #4facfe, #00f2fe)";
-    document.body.style.background = color;
+function setBackground(condition) {
+
+    let bgImage = "";
+
+    if (condition.includes("Clear")) {
+        bgImage = "images/clear.gif";
+    }
+    else if (condition.includes("Cloud")) {
+        bgImage = "images/clouds.gif";
+    }
+    else if (condition.includes("Rain")) {
+        bgImage = "images/rain.gif";
+    }
+    else if (condition.includes("Snow")) {
+        bgImage = "images/snow.gif";
+    }
+    else if (condition.includes("Thunder")) {
+        bgImage = "images/thunder.gif";
+    }
+    else {
+        bgImage = "images/default.gif";
+    }
+
+    document.body.style.backgroundImage = `url('${bgImage}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
 }
 
 function loadCurrent() {
@@ -24,7 +42,7 @@ function loadCurrent() {
         })
         .then(data => {
             const cond = data.weather[0].main;
-            setBackgroundColor(cond);
+            setBackground(cond);
 
             currentWeather.innerHTML = `
                 <h1>${data.name}</h1>
